@@ -1,9 +1,9 @@
 package com.zk.msscbeerorderservice.web.mappers;
 
+import com.zk.brewery.model.BeerDto;
+import com.zk.brewery.model.BeerOrderLineDto;
 import com.zk.msscbeerorderservice.domain.BeerOrderLine;
 import com.zk.msscbeerorderservice.services.beer.BeerService;
-import com.zk.msscbeerorderservice.web.model.BeerDto;
-import com.zk.msscbeerorderservice.web.model.BeerOrderLineDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 

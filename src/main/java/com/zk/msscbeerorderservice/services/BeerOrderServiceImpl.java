@@ -1,13 +1,13 @@
 package com.zk.msscbeerorderservice.services;
 
+import com.zk.brewery.model.BeerOrderDto;
+import com.zk.brewery.model.BeerOrderPagedList;
 import com.zk.msscbeerorderservice.domain.BeerOrder;
 import com.zk.msscbeerorderservice.domain.BeerOrderStatusEnum;
 import com.zk.msscbeerorderservice.domain.Customer;
 import com.zk.msscbeerorderservice.repositories.BeerOrderRepository;
 import com.zk.msscbeerorderservice.repositories.CustomerRepository;
 import com.zk.msscbeerorderservice.web.mappers.BeerOrderMapper;
-import com.zk.msscbeerorderservice.web.model.BeerOrderDto;
-import com.zk.msscbeerorderservice.web.model.BeerOrderPagedList;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;

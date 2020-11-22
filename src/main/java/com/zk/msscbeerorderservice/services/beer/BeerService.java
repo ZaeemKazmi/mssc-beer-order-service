@@ -1,6 +1,6 @@
 package com.zk.msscbeerorderservice.services.beer;
 
-import com.zk.msscbeerorderservice.web.model.BeerDto;
+import com.zk.brewery.model.BeerDto;
 
 import java.util.Optional;
 import java.util.UUID;

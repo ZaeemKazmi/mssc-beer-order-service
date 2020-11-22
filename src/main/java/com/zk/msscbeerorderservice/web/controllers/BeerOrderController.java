@@ -1,8 +1,8 @@
 package com.zk.msscbeerorderservice.web.controllers;
 
+import com.zk.brewery.model.BeerOrderDto;
+import com.zk.brewery.model.BeerOrderPagedList;
 import com.zk.msscbeerorderservice.services.BeerOrderService;
-import com.zk.msscbeerorderservice.web.model.BeerOrderDto;
-import com.zk.msscbeerorderservice.web.model.BeerOrderPagedList;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

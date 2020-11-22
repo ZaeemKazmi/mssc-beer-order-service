@@ -1,7 +1,7 @@
 package com.zk.msscbeerorderservice.services;
 
-import com.zk.msscbeerorderservice.web.model.BeerOrderDto;
-import com.zk.msscbeerorderservice.web.model.BeerOrderPagedList;
+import com.zk.brewery.model.BeerOrderDto;
+import com.zk.brewery.model.BeerOrderPagedList;
 import org.springframework.data.domain.Pageable;
 
 import java.util.UUID;

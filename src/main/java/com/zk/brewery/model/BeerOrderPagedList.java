@@ -1,4 +1,4 @@
-package com.zk.msscbeerorderservice.web.model;
+package com.zk.brewery.model;
 
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;

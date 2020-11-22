@@ -1,11 +1,11 @@
 package com.zk.msscbeerorderservice.services;
 
+import com.zk.brewery.model.BeerOrderDto;
+import com.zk.brewery.model.BeerOrderLineDto;
 import com.zk.msscbeerorderservice.bootstrap.BeerOrderBootStrap;
 import com.zk.msscbeerorderservice.domain.Customer;
 import com.zk.msscbeerorderservice.repositories.BeerOrderRepository;
 import com.zk.msscbeerorderservice.repositories.CustomerRepository;
-import com.zk.msscbeerorderservice.web.model.BeerOrderDto;
-import com.zk.msscbeerorderservice.web.model.BeerOrderLineDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
