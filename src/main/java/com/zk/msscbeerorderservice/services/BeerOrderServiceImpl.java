@@ -1,8 +1,8 @@
 package com.zk.msscbeerorderservice.services;
 
 import com.zk.msscbeerorderservice.domain.BeerOrder;
+import com.zk.msscbeerorderservice.domain.BeerOrderStatusEnum;
 import com.zk.msscbeerorderservice.domain.Customer;
-import com.zk.msscbeerorderservice.domain.OrderStatusEnum;
 import com.zk.msscbeerorderservice.repositories.BeerOrderRepository;
 import com.zk.msscbeerorderservice.repositories.CustomerRepository;
 import com.zk.msscbeerorderservice.web.mappers.BeerOrderMapper;
@@ -67,7 +67,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
             BeerOrder beerOrder = beerOrderMapper.dtoToBeerOrder(beerOrderDto);
             beerOrder.setId(null); //should not be set by outside client
             beerOrder.setCustomer(customerOptional.get());
-            beerOrder.setOrderStatus(OrderStatusEnum.NEW);
+            beerOrder.setOrderStatus(BeerOrderStatusEnum.NEW);
 
             beerOrder.getBeerOrderLines().forEach(line -> line.setBeerOrder(beerOrder));
 
@@ -92,7 +92,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
     @Override
     public void pickupOrder(UUID customerId, UUID orderId) {
         BeerOrder beerOrder = getOrder(customerId, orderId);
-        beerOrder.setOrderStatus(OrderStatusEnum.PICKED_UP);
+        beerOrder.setOrderStatus(BeerOrderStatusEnum.PICKED_UP);
 
         beerOrderRepository.save(beerOrder);
     }
