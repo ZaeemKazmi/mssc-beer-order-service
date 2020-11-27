@@ -1,6 +1,6 @@
 package com.zk.msscbeerorderservice.sm.actions;
 
-import com.zk.brewery.model.events.DeallocateOrderResult;
+import com.zk.brewery.model.events.DeallocateOrderRequest;
 import com.zk.msscbeerorderservice.config.JmsConfig;
 import com.zk.msscbeerorderservice.domain.BeerOrder;
 import com.zk.msscbeerorderservice.domain.BeerOrderEventEnum;
@@ -34,7 +34,7 @@ public class DeallocateOrderAction implements Action<BeerOrderStatusEnum, BeerOr
 
         beerOrderOptional.ifPresentOrElse(beerOrder -> {
             jmsTemplate.convertAndSend(JmsConfig.DEALLOCATE_ORDER_QUEUE,
-                    DeallocateOrderResult.builder()
+                    DeallocateOrderRequest.builder()
                             .beerOrderDto(beerOrderMapper.beerOrderToDto(beerOrder))
                             .build());
             log.debug("Sent Deallocation Request for order id: " + beerOrderId);
